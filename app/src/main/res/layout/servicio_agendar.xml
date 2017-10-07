@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1565C0"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0D47A1"
+        android:elevation="4dp"
+        android:title="Servicio de Agendado" />
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="80dp"
+        android:background="#1565C0"
+        android:drawableRight="@drawable/ic_person_black_24dp"
+        android:text="Nombre de solicitante"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eT_nombrea"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtView"
+        android:layout_below="@+id/txtView"
+        android:background="#FFFFFF"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/txtView2"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtView"
+        android:layout_marginTop="180dp"
+        android:background="#1565C0"
+        android:drawableRight="@drawable/ic_place_black_24dp"
+        android:text="Lugar donde se requiere"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eT_origena"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtView"
+        android:layout_below="@+id/txtView2"
+        android:background="#FFFFFF"
+        android:inputType="textPostalAddress" />
+
+    <TextView
+        android:id="@+id/txtView3"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtView"
+        android:layout_marginTop="280dp"
+        android:background="#1565C0"
+        android:drawableRight="@drawable/ic_directions_black_24dp"
+        android:text="Lugar de destino"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eT_destinoa"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtView"
+        android:layout_below="@+id/txtView3"
+        android:background="#FFFFFF"
+        android:inputType="textPostalAddress" />
+
+    <TextView
+        android:id="@+id/txtView4"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/txtView"
+        android:layout_marginTop="380dp"
+        android:background="#1565C0"
+        android:drawableRight="@drawable/ic_access_time_black_24dp"
+        android:text="Hora en que se requiere"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/eT_hora"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@id/txtView"
+        android:layout_below="@+id/txtView4"
+        android:background="#FFFFFF"
+        android:inputType="time"
+        android:maxLength="5" />
+
+    <Button
+        android:id="@+id/b_agendar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="480dp"
+        android:drawableRight="@drawable/ic_local_taxi_black_24dp"
+        android:text="Solicitar" />
+
+</RelativeLayout>

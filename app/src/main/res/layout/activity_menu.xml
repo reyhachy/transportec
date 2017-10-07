@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1565C0"
+    tools:context="edelafa.transportec.MenuActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/transporlogo" />
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_marginTop="150dp"
+        android:background="#1565C0" />
+
+    <Button
+        android:id="@+id/b_info"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expandableListView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:drawableStart="@drawable/ic_info_outline_black_24dp"
+        android:text="info" />
+
+</RelativeLayout>
