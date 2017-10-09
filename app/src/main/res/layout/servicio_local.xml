@@ -8,80 +8,248 @@
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#0D47A1"
         android:elevation="4dp"
-        android:title="Servicio Local" />
+        android:title="Pide tu viaje" />
 
-    <TextView
-        android:id="@+id/txtView"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:background="#1565C0"
-        android:drawableRight="@drawable/ic_person_black_24dp"
-        android:text="Nombre de solicitante"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/eT_nombrel"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_alignStart="@+id/txtView"
-        android:layout_below="@+id/txtView"
-        android:background="#FFFFFF"
-        android:inputType="textPersonName" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txtView2"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_alignStart="@+id/txtView"
-        android:layout_marginTop="200dp"
-        android:background="#1565C0"
-        android:drawableRight="@drawable/ic_place_black_24dp"
-        android:text="Lugar de origen"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/eT_origenl"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_alignStart="@+id/txtView"
-        android:layout_below="@+id/txtView2"
-        android:background="#FFFFFF"
-        android:inputType="textPostalAddress" />
+            <CheckBox
+                android:id="@+id/checkagendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="28dp"
+                android:textColor="#FFFFFF"
+                android:text="Viaje Agendado" />
 
-    <TextView
-        android:id="@+id/txtView3"
-        android:layout_width="300dp"
-        android:layout_height="30dp"
-        android:layout_alignStart="@+id/txtView"
-        android:layout_marginTop="300dp"
-        android:background="#1565C0"
-        android:drawableRight="@drawable/ic_directions_black_24dp"
-        android:text="Lugar de destino"
-        android:textColor="#000000"
-        android:textSize="20dp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/eT_destinol"
+            <EditText
+                android:id="@+id/nombre_text"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/txtView"
+                android:layout_below="@+id/txtView"
+                android:background="#FFFFFF"
+                android:hint="Nombre del solicitante"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="content_description"
+                android:src="@drawable/ic_person_black_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/origen_text"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_alignStart="@+id/txtView"
+            android:layout_below="@+id/txtView2"
+            android:background="#FFFFFF"
+            android:inputType="textPostalAddress"
+            android:hint="Lugar de origen"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="content_description"
+            android:src="@drawable/ic_place_black_24dp" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+        android:id="@+id/destino_text"
         android:layout_width="300dp"
         android:layout_height="30dp"
         android:layout_alignStart="@+id/txtView"
         android:layout_below="@+id/txtView3"
         android:background="#FFFFFF"
-        android:inputType="textPostalAddress" />
+        android:inputType="textPostalAddress"
+        android:hint="Lugar de destino"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"/>
 
-    <Button
-        android:id="@+id/b_solicitarlocal"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:drawableRight="@drawable/ic_local_taxi_black_24dp"
-        android:text="Solicitar" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="content_description"
+            android:src="@drawable/ic_directions_black_24dp" />
 
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/hora_text"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/txtView"
+                android:layout_below="@+id/txtView3"
+                android:background="#FFFFFF"
+                android:inputType="textPostalAddress"
+                android:hint="Hora de viaje"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                android:contentDescription="content_description"
+                android:src="@drawable/ic_access_time_black_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/dia_text"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/txtView"
+                android:layout_below="@+id/txtView3"
+                android:background="#FFFFFF"
+                android:inputType="textPostalAddress"
+                android:hint="dia"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="15dp"/>
+
+            <EditText
+                android:id="@+id/mes_text"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/txtView"
+                android:layout_below="@+id/txtView3"
+                android:background="#FFFFFF"
+                android:inputType="textPostalAddress"
+                android:hint="mes"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <EditText
+                android:id="@+id/año_text"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/txtView"
+                android:layout_below="@+id/txtView3"
+                android:background="#FFFFFF"
+                android:inputType="textPostalAddress"
+                android:hint="año"
+                android:visibility="gone"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                android:contentDescription="content_description"
+                android:src="@drawable/ic_access_time_black_24dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/checkForaneo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp"
+                android:text="Viaje Foraneo" />
+
+            <Button
+                android:layout_below="@+id/checkForaneo"
+                android:id="@+id/b_solicitarlocal"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:drawableRight="@drawable/ic_local_taxi_black_24dp"
+                android:text="Solicitar" />
+
+
+        </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
 </RelativeLayout>

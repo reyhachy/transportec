@@ -1,4 +1,4 @@
-package edelafa.transportec.JSON_Adapter;
+package edelafa.transportec.Transportec;
 
 import android.util.Log;
 

@@ -1,4 +1,4 @@
-package edelafa.transportec;
+package edelafa.transportec.Transportec.Activities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import edelafa.transportec.JSON_Adapter.JSONParser;
+import edelafa.transportec.R;
+import edelafa.transportec.Transportec.JSONParser;
 
 public class MainActivity extends Activity implements OnClickListener {
 
@@ -69,7 +70,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 new AttemptLogin().execute();
                 break;
             case R.id.b_registro:
-                Intent i = new Intent(this, RegistrarActivity.class);
+                Intent i = new Intent(this, RegisterActivity.class);
                 startActivity(i);
                 break;
 

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Transportec.Activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,21 +22,15 @@
         </activity>
         <!-- Se asignan las demas Activity a utilizar -->
         <activity
-            android:name=".MenuActivity"
+            android:name=".Transportec.Activities.MenuActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".RegistrarActivity"
+            android:name=".Transportec.Activities.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".SLocal"
+            android:name=".Transportec.Activities.serviceActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".SForaneo"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".SAgendar"
-            android:screenOrientation="portrait" />
-        <activity android:name=".ITaxistas"
+        <activity android:name=".Transportec.Activities.InfoTaxistaActivity"
             android:screenOrientation="portrait"/>
 
 

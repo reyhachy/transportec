@@ -1,4 +1,4 @@
-package edelafa.transportec;
+package edelafa.transportec.Transportec.Activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import edelafa.transportec.Transportec.Adapters.ListAdapter;
+import edelafa.transportec.R;
 
 public class MenuActivity extends Activity {
 
@@ -63,31 +66,30 @@ public class MenuActivity extends Activity {
                 Intent intent;
 
                 switch (selected){
-                    case "Solicitar Local": intent = new Intent(MenuActivity.this, SLocal.class);
+                    case "Solicitar Local": intent =
+                            new Intent(MenuActivity.this, serviceActivity.class);
                         startActivity(intent);
                         break;
                 }
 
                 switch (selected){
-                    case "Solicitar Foraneo": intent = new Intent(MenuActivity.this, SForaneo.class);
+                    case "Agendar": intent =
+                            new Intent(MenuActivity.this, SAgendar.class);
                         startActivity(intent);
                         break;
                 }
 
                 switch (selected){
-                    case "Agendar": intent = new Intent(MenuActivity.this, SAgendar.class);
+                    case "Tarifas": intent =
+                            new Intent(MenuActivity.this, InfoTarifaActivity.class);
                         startActivity(intent);
                         break;
                 }
 
                 switch (selected){
-                    case "Tarifas": intent = new Intent(MenuActivity.this, ITarifas.class);
-                        startActivity(intent);
-                        break;
-                }
+                    case "Taxistas": intent =
 
-                switch (selected){
-                    case "Taxistas": intent = new Intent(MenuActivity.this, ITaxistas.class);
+                            new Intent(MenuActivity.this, InfoTaxistaActivity.class);
                         startActivity(intent);
                         break;
                 }

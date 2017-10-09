@@ -1,4 +1,4 @@
-package edelafa.transportec;
+package edelafa.transportec.Transportec.Activities;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,9 +16,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import edelafa.transportec.JSON_Adapter.JSONParser;
+import edelafa.transportec.R;
+import edelafa.transportec.Transportec.JSONParser;
 
-public class RegistrarActivity extends Activity implements OnClickListener{
+public class RegisterActivity extends Activity implements OnClickListener{
     private EditText user, pass;
     private Button  bRegistrarse;
 
@@ -61,7 +62,7 @@ public class RegistrarActivity extends Activity implements OnClickListener{
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(RegistrarActivity.this);
+            pDialog = new ProgressDialog(RegisterActivity.this);
             pDialog.setMessage("Creating User...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
@@ -112,7 +113,7 @@ public class RegistrarActivity extends Activity implements OnClickListener{
             // dismiss the dialog once product deleted
             pDialog.dismiss();
             if (file_url != null){
-                Toast.makeText(RegistrarActivity.this, file_url, Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, file_url, Toast.LENGTH_LONG).show();
             }
         }
     }

@@ -1,4 +1,4 @@
-package edelafa.transportec;
+package edelafa.transportec.Transportec.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.List;
 import java.util.Map;
+
+import edelafa.transportec.R;
 
 public class ListAdapter extends BaseExpandableListAdapter {
 
