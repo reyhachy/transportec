@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="153dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="#1565C0"
+                android:contentDescription="content_description"
+                android:src="@mipmap/transporlogo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/usuario_text"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:hint="Usuario"
+                    android:background="#FFFFFF"
+                    android:inputType="textPersonName" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="content_description"
+                    android:src="@drawable/ic_person_black_24dp" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/password_text"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:hint="Contraseña"
+                android:background="#FFFFFF"
+                android:inputType="textPersonName" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:contentDescription="content_description"
+                android:src="@drawable/ic_key_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/acces_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Acceder" />
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Registrar" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

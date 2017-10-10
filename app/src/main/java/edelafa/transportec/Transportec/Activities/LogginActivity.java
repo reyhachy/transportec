@@ -25,7 +25,7 @@ import android.widget.Toast;
 import edelafa.transportec.R;
 import edelafa.transportec.Transportec.JSONParser;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class LogginActivity extends Activity implements OnClickListener {
 
     private EditText user;
     private EditText pass;
@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_loggin);
 
         // setup input fields
         user = (EditText) findViewById(R.id.eTUsuario);
@@ -84,7 +84,7 @@ public class MainActivity extends Activity implements OnClickListener {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(MainActivity.this);
+            pDialog = new ProgressDialog(LogginActivity.this);
             pDialog.setMessage("Attempting login...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
@@ -116,12 +116,12 @@ public class MainActivity extends Activity implements OnClickListener {
                     Log.d("Login Successful!", json.toString());
                     // save user data
                     SharedPreferences sp = PreferenceManager
-                            .getDefaultSharedPreferences(MainActivity.this);
+                            .getDefaultSharedPreferences(LogginActivity.this);
                     Editor edit = sp.edit();
                     edit.putString("username", username);
                     edit.commit();
 
-                    Intent i = new Intent(MainActivity.this, MenuActivity.class);
+                    Intent i = new Intent(LogginActivity.this, MenuActivity.class);
                     finish();
                     startActivity(i);
                     return json.getString(TAG_MESSAGE);
@@ -141,7 +141,7 @@ public class MainActivity extends Activity implements OnClickListener {
             // dismiss the dialog once product deleted
             pDialog.dismiss();
             if (file_url != null) {
-                Toast.makeText(MainActivity.this, file_url, Toast.LENGTH_LONG).show();
+                Toast.makeText(LogginActivity.this, file_url, Toast.LENGTH_LONG).show();
             }
         }
     }
