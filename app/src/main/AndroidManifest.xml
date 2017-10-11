@@ -28,7 +28,7 @@
             android:name=".Transportec.Activities.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Transportec.Activities.serviceActivity"
+            android:name=".Transportec.Activities.ServiceActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".Transportec.Activities.InfoTaxistaActivity"
             android:screenOrientation="portrait"/>

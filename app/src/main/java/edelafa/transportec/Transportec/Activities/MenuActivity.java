@@ -67,7 +67,7 @@ public class MenuActivity extends Activity {
 
                 switch (selected){
                     case "Solicitar Local": intent =
-                            new Intent(MenuActivity.this, serviceActivity.class);
+                            new Intent(MenuActivity.this, ServiceActivity.class);
                         startActivity(intent);
                         break;
                 }
