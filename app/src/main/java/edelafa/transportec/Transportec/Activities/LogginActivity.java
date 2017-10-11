@@ -39,11 +39,6 @@ public class LogginActivity extends Activity implements OnClickListener {
     private Button bRegistro;
     private ProgressDialog pDialog;
     private LogginPresenter mlogginPresenter;
-    // Clase JSONParser
-    JSONParser jsonParser = new JSONParser();
-    private static final String LOGIN_URL = "https://transportec.000webhostapp.com/JSON/login.php";
-    private static final String TAG_SUCCESS = "success";
-    private static final String TAG_MESSAGE = "message";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,9 +67,5 @@ public class LogginActivity extends Activity implements OnClickListener {
                 break;
         }
     }
-
-
-
-
-        }
+}
 
