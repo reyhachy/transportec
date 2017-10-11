@@ -50,6 +50,7 @@ public class RegisterActivity extends Activity implements OnClickListener{
         bRegistrarse.setOnClickListener(this);
     }
 
+
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
