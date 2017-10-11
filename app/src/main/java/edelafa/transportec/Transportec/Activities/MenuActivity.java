@@ -72,12 +72,12 @@ public class MenuActivity extends Activity {
                         break;
                 }
 
-                switch (selected){
+                /*switch (selected){
                     case "Agendar": intent =
                             new Intent(MenuActivity.this, SAgendar.class);
                         startActivity(intent);
                         break;
-                }
+                }*/
 
                 switch (selected){
                     case "Tarifas": intent =

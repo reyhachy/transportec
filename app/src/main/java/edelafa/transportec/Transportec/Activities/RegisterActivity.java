@@ -42,8 +42,6 @@ public class RegisterActivity extends Activity implements OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
 
-        user = (EditText)findViewById(R.id.eTUsuario);
-        pass = (EditText)findViewById(R.id.eTPassword);
 
 
         bRegistrarse = (Button)findViewById(R.id.b_registrarse);
@@ -75,13 +73,13 @@ public class RegisterActivity extends Activity implements OnClickListener{
             // TODO Auto-generated method stub
             // Check for success tag
             int success;
-            String username = user.getText().toString();
-            String password = pass.getText().toString();
+            /*String username = user.getText().toString();
+            String password = pass.getText().toString();*/
             try {
                 // Building Parameters
                 List params = new ArrayList();
-                params.add(new BasicNameValuePair("username", username));
-                params.add(new BasicNameValuePair("password", password));
+               /* params.add(new BasicNameValuePair("username", username));
+                params.add(new BasicNameValuePair("password", password));*/
 
                 Log.d("request!", "starting");
 
