@@ -15,6 +15,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import butterknife.BindView;
 import edelafa.transportec.Transportec.Adapters.ListAdapter;
 import edelafa.transportec.R;
 
@@ -24,15 +25,18 @@ public class MenuActivity extends Activity {
     Map<String, List<String>> ParentListItems;
     ExpandableListView expandableListView;
 
+    @BindView(R.id.b_info)
+    private Button bInfo;
+
     //Se asignan los Padres de la ExpandableListView
     List<String> ParentList = new ArrayList<String>();
     {
-        ParentList.add("Solicitar");
+        ParentList.add("Servicio");
         ParentList.add("Consultar");
     }
 
     //Se asignan los Hijos de la ExpandableListView
-    String[] SolicitudName = {"Solicitar Local", "Solicitar Foraneo", "Agendar"};
+    String[] SolicitudName = {"Solicitar Taxi"};
     String[] InformaciónName = {"Tarifas", "Taxistas"};
     String[] ByDefaultMessage = {"Cargando"};
 
@@ -44,7 +48,7 @@ public class MenuActivity extends Activity {
         ParentListItems = new LinkedHashMap<String, List<String>>();
 
         for (String HoldItem : ParentList){
-            if (HoldItem.equals("Solicitar")){
+            if (HoldItem.equals("Servicio")){
                 loadChild(SolicitudName);
             } else if (HoldItem.equals("Consultar")){
                 loadChild(InformaciónName);
@@ -56,8 +60,6 @@ public class MenuActivity extends Activity {
         expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
         final ExpandableListAdapter expListAdapter = new ListAdapter(this, ParentList, ParentListItems);
         expandableListView.setAdapter(expListAdapter);
-
-        Button b_info = (Button) findViewById(R.id.b_info);
 
         expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
@@ -98,7 +100,7 @@ public class MenuActivity extends Activity {
             }
         });
 
-        b_info.setOnClickListener(new View.OnClickListener() {
+        bInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

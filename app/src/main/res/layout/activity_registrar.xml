@@ -21,7 +21,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/nombre_text"
+                android:id="@+id/nombre_texto"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
@@ -126,7 +126,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/phone_texto"
+                android:id="@+id/password_texto"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"
@@ -152,7 +152,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/phone_texto"
+                android:id="@+id/password2_texto"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="30dp"

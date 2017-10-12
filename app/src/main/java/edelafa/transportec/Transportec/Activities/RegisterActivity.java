@@ -1,10 +1,5 @@
 package edelafa.transportec.Transportec.Activities;
 
-import java.util.ArrayList;
-import java.util.List;
-import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
-import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
@@ -16,12 +11,31 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
 import edelafa.transportec.R;
 import edelafa.transportec.Transportec.JSONParser;
 
 public class RegisterActivity extends Activity implements OnClickListener{
-    private EditText user, pass;
-    private Button  bRegistrarse;
+    @BindView(R.id.nombre_texto)
+    private EditText nombre;
+    @BindView(R.id.apellidos_texto)
+    private EditText apellidos;
+    @BindView(R.id.edad_texto)
+    private EditText edad;
+    @BindView(R.id.phone_texto)
+    private EditText phone;
+    @BindView(R.id.password_texto)
+    private EditText password;
+    @BindView(R.id.password2_texto)
+    private EditText password2;
+    @BindView(R.id.b_registrarse)
+    private Button bRegistrarse;
 
     // Progress Dialog
     private ProgressDialog pDialog;
@@ -41,10 +55,7 @@ public class RegisterActivity extends Activity implements OnClickListener{
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
-
-
-
-        bRegistrarse = (Button)findViewById(R.id.b_registrarse);
+        
         bRegistrarse.setOnClickListener(this);
     }
 
