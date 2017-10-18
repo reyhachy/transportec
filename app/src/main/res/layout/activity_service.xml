@@ -138,7 +138,7 @@
                 android:layout_alignStart="@+id/txtView"
                 android:layout_below="@+id/txtView3"
                 android:background="#FFFFFF"
-                android:inputType="textPostalAddress"
+                android:inputType="time"
                 android:hint="Hora de viaje"
                 android:visibility="gone"
                 android:layout_marginLeft="30dp"
