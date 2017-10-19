@@ -1,6 +1,7 @@
 package edelafa.transportec.Transportec.back.interfaces;
 
 import edelafa.transportec.R;
+import edelafa.transportec.Transportec.back.Pojos.BasePojo;
 
 /**
  * Created by reype on 11/10/2017.

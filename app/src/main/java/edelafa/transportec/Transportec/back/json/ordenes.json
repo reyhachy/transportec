@@ -1,0 +1,28 @@
+{
+  "ordenes": {
+    "orden": [
+      {
+        "ID": "",
+        "origen": "",
+        "destino": "",
+        "usuario":
+      {
+        "ID": "",
+        "nombre": "",
+        "apellidos": ""
+      },
+      "taxista":
+      {
+        "folio": "",
+        "nombre": "",
+        "apellidos": ""
+      },
+      "taxi":
+      {
+        "taxinumero": "",
+        "matricula": ""
+      }
+    }
+    ]
+  }
+}

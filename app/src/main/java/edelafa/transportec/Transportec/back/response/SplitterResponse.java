@@ -6,8 +6,7 @@ import java.util.ArrayList;
 
 public class SplitterResponse extends BaseResponse {
 
-    @SerializedName("taxistas")
-    public SplitterObject splittertaxistas;
+
     @SerializedName("usuarios")
     public SplitterObject splitterusers;
     @SerializedName("peticiones")

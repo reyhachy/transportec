@@ -1,4 +1,4 @@
-"usuarios":{
+{"usuarios":{
   "usuario":[
     {
       "ID": "1",
@@ -40,4 +40,5 @@
       "celular": "273 116 3030"
     },
     ]
+}
 }
