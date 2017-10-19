@@ -5,7 +5,7 @@
       "nombre": "Ernesto",
       "apellidos": "de la Fraga Acosta",
       "edad": "26",
-      "celular": "273 123 0383"
+      "telefono": "273 123 0383"
     },
     {
       "ID": "2",
@@ -13,7 +13,7 @@
       "apellidos": "Gonzales Perez",
       "direccion": "Conocida",
       "edad": "33",
-      "celular": "271 121 0000"
+      "telefono": "271 121 0000"
     },
     {
       "ID": "3",
@@ -21,7 +21,7 @@
       "apellidos": "Santos Ramírez",
       "direccion": "Conocida",
       "edad": "21",
-      "celular": "273 110 6421"
+      "telefono": "273 110 6421"
     },
     {
       "ID": "4",
@@ -29,7 +29,7 @@
       "apellidos": "Galindo Neza",
       "direccion": "Conocida",
       "edad": "18",
-      "celular": "273 100 1500"
+      "telefono": "273 100 1500"
     },
     {
       "ID": "5",
@@ -37,8 +37,8 @@
       "apellidos": "Sanchez Sampieri",
       "direccion": "Conocida",
       "edad": "30",
-      "celular": "273 116 3030"
-    },
+      "telefono": "273 116 3030"
+    }
     ]
 }
 }

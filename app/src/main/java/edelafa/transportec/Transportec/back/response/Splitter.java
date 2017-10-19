@@ -9,15 +9,15 @@ public class Splitter implements Serializable {
     @SerializedName("ID")
     public String id;
     @SerializedName("Folio")
-    public String folio;
+    public String folioNumber;
     @SerializedName("nombre")
     public String name;
     @SerializedName("apellidos")
     public String lastname;
     @SerializedName ("direccion")
     public String address;
-    @SerializedName("celular")
-    public String cellphone;
+    @SerializedName("telefono")
+    public String phoneNumber;
     @SerializedName("edad")
     public String age;
     @SerializedName("origen")
@@ -29,8 +29,8 @@ public class Splitter implements Serializable {
     @SerializedName("fecha")
     public String date;
     @SerializedName("taxinumero")
-    public String taxinumber;
+    public String taxiNumber;
     @SerializedName("matricula")
-    public String registrationnumber;
+    public String registrationNumber;
 
 }

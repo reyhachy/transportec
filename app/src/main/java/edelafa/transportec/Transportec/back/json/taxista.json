@@ -6,7 +6,7 @@
       "apellidos": "Paz Rulfo",
       "direccion": "Conocida",
       "edad": "32",
-      "celular": "273 100 0000"
+      "telefono": "273 100 0000"
     },
     {
       "Folio": "231313",
@@ -14,28 +14,28 @@
       "apellidos": "Vasco Aguilar",
       "direccion": "Conocida",
       "edad": "36",
-      "celular": "273 111 0011"
+      "telefono": "273 111 0011"
     },
     {
       "Folio": "616263",
       "nombre": "Vladimir",
       "apellidos": "Barrios Cano",
       "direccion": "Conocida",
-      "celular": "273 123 1221"
+      "telefono": "273 123 1221"
     },
     {
       "Folio": "416231",
       "nombre": "Javier",
       "apellidos": "Elias Giménez",
       "direccion": "Conocida",
-      "celular": "273 100 1500"
+      "telefono": "273 100 1500"
     },
     {
       "Folio": "857431",
       "nombre": "Armando",
       "apellidos": "López Marin",
       "direccion": "Conocida",
-      "celular": "273 119 6010"
+      "telefono": "273 119 6010"
     }
   ]
 }

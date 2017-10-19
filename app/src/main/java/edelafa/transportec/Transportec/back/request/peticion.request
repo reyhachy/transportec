@@ -1,0 +1,13 @@
+{
+    "peticiones": {
+        "peticion": [
+            {
+                "ID": "",
+                "usuario": {
+                    "nombre": "",
+                    "apellidos": ""
+                }
+            }
+        ]
+    }
+}
