@@ -25,30 +25,38 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import edelafa.transportec.R;
+import edelafa.transportec.Transportec.Activities.taxistaapi.BaseActivity;
 import edelafa.transportec.Transportec.JSONParser;
+import edelafa.transportec.Transportec.presenters.BasePresenter;
 import edelafa.transportec.Transportec.presenters.LogginPresenter;
 
-public class LogginActivity extends Activity implements OnClickListener {
+public class LogginActivity extends BaseActivity implements OnClickListener {
     @BindView(R.id.usuario_text)
-    EditText user;
+    public EditText user;
     @BindView(R.id.password_text)
-    EditText pass;
+    public EditText pass;
     @BindView(R.id.acces_button)
-    Button bAcceder;
+    public Button bAcceder;
     @BindView(R.id.register_button)
-    Button bRegistro;
+    public Button bRegistro;
     ProgressDialog pDialog;
     private LogginPresenter mlogginPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loggin);
         ButterKnife.bind(this);
         bAcceder.setOnClickListener(this);
         bRegistro.setOnClickListener(this);
 
+    }
+
+    @Override
+    protected BasePresenter[] getPresenters() {
+        return new BasePresenter[]{
+                mlogginPresenter = new LogginPresenter(this)
+        };
     }
 
     @Override

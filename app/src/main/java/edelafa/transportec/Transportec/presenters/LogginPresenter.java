@@ -1,6 +1,9 @@
 package edelafa.transportec.Transportec.presenters;
 
+import android.support.v7.app.AppCompatActivity;
+
 import edelafa.transportec.R;
+import edelafa.transportec.Transportec.Activities.MenuActivity;
 import edelafa.transportec.Transportec.back.interfaces.ResultCalBack;
 
 /**
@@ -9,7 +12,9 @@ import edelafa.transportec.Transportec.back.interfaces.ResultCalBack;
 
 public class LogginPresenter extends BasePresenter implements ResultCalBack{
 
-
+    public LogginPresenter(AppCompatActivity appCompatActivity) {
+        super(appCompatActivity);
+    }
 
     @Override
     public void onRequestWS(String requestUrl) {
@@ -32,5 +37,8 @@ public class LogginPresenter extends BasePresenter implements ResultCalBack{
     }
 
     public void loggin(String user, String pass) {
+        if(user == "Pablito" && pass == "123456"){
+            MenuActivity.launch(mAppCompatActivity);
+        }
     }
 }

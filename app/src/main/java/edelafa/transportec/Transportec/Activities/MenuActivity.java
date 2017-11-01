@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListAdapter;
@@ -20,6 +21,11 @@ import edelafa.transportec.Transportec.Adapters.ListAdapter;
 import edelafa.transportec.R;
 
 public class MenuActivity extends Activity {
+
+    public static void launch(AppCompatActivity appCompatActivity) {
+        Intent intent = new Intent(appCompatActivity, MenuActivity.class);
+        appCompatActivity.startActivity(intent);
+    }
 
     List<String> ChildList;
     Map<String, List<String>> ParentListItems;
