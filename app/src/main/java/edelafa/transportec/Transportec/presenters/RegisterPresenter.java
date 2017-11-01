@@ -3,10 +3,6 @@ package edelafa.transportec.Transportec.presenters;
 import edelafa.transportec.R;
 import edelafa.transportec.Transportec.back.interfaces.ResultCalBack;
 
-/**
- * Created by reype on 11/10/2017.
- */
-
 public class RegisterPresenter extends BasePresenter implements ResultCalBack{
 
 

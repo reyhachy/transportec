@@ -1,9 +1,5 @@
 package edelafa.transportec.Transportec.back.Pojos;
 
-/**
- * Created by reype on 11/10/2017.
- */
-
 public class Orden extends BasePojo {
 
     public String userName;
