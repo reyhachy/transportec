@@ -24,8 +24,8 @@ public class InfoTaxistaActivity extends Activity {
     private static final String TAG = "taxista";
 
     @BindView(R.id.recyclerView)
-    private ListView listViewTaxistas;
-    private Retrofit retrofit;
+    ListView listViewTaxistas;
+    Retrofit retrofit;
 
     @Override
     protected void onCreate (Bundle savedInstanceState){

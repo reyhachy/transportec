@@ -30,14 +30,14 @@ import edelafa.transportec.Transportec.presenters.LogginPresenter;
 
 public class LogginActivity extends Activity implements OnClickListener {
     @BindView(R.id.usuario_text)
-    private EditText user;
+    EditText user;
     @BindView(R.id.password_text)
-    private EditText pass;
+    EditText pass;
     @BindView(R.id.acces_button)
-    private Button bAcceder;
+    Button bAcceder;
     @BindView(R.id.register_button)
-    private Button bRegistro;
-    private ProgressDialog pDialog;
+    Button bRegistro;
+    ProgressDialog pDialog;
     private LogginPresenter mlogginPresenter;
 
     @Override
@@ -53,7 +53,6 @@ public class LogginActivity extends Activity implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        // TODO Auto-generated method stub
         switch (v.getId()) {
             case R.id.acces_button:
                 mlogginPresenter.loggin(user.getText().toString().trim(),pass.getText().toString().trim());

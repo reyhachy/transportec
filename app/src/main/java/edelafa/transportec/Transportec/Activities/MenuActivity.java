@@ -26,7 +26,7 @@ public class MenuActivity extends Activity {
     ExpandableListView expandableListView;
 
     @BindView(R.id.b_info)
-    private Button bInfo;
+    Button bInfo;
 
     //Se asignan los Padres de la ExpandableListView
     List<String> ParentList = new ArrayList<String>();
