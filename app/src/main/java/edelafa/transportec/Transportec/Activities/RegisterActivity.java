@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import edelafa.transportec.R;
 import edelafa.transportec.Transportec.JSONParser;
 
@@ -55,7 +56,7 @@ public class RegisterActivity extends Activity implements OnClickListener{
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
-
+        ButterKnife.bind(this);
         bRegistrarse.setOnClickListener(this);
     }
 

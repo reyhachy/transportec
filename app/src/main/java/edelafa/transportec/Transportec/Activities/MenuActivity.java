@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import edelafa.transportec.Transportec.Adapters.ListAdapter;
 import edelafa.transportec.R;
 
@@ -50,7 +51,7 @@ public class MenuActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-
+        ButterKnife.bind(this);
         ParentListItems = new LinkedHashMap<String, List<String>>();
 
         for (String HoldItem : ParentList){
