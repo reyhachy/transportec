@@ -63,11 +63,10 @@ public class LogginActivity extends BaseActivity implements OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.acces_button:
-                MenuActivity.launch(this);
+                mlogginPresenter.loggin(user.getText().toString().trim(),pass.getText().toString().trim());
                 break;
             case R.id.register_button:
-                Intent i = new Intent(this, RegisterActivity.class);
-                startActivity(i);
+                RegisterActivity.launch(this);
                 break;
 
             default:

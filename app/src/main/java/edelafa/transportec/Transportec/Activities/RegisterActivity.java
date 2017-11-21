@@ -2,8 +2,10 @@ package edelafa.transportec.Transportec.Activities;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -50,6 +52,11 @@ public class RegisterActivity extends Activity implements OnClickListener{
     //ids
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
+
+    public static void launch(AppCompatActivity appCompatActivity) {
+        Intent intent = new Intent(appCompatActivity, RegisterActivity.class);
+        appCompatActivity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
