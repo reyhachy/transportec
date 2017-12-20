@@ -2,30 +2,35 @@ package edelafa.transportec.Transportec.Activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ListView;
+
+import com.totalplay.view.BaseSimpleRecyclerView.BaseSimpleRecyclerView;
+import com.totalplay.view.BaseSimpleRecyclerView.RefreshBaseRecyclerCallback;
 
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import edelafa.transportec.R;
-import edelafa.transportec.Transportec.Activities.models.TaxistaRespuesta;
-import edelafa.transportec.Transportec.Activities.models.Taxistas;
-import edelafa.transportec.Transportec.Activities.taxistaapi.RetrofitService;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+import edelafa.transportec.Transportec.Activities.taxistaapi.BaseActivity;
+import edelafa.transportec.Transportec.Adapters.InfoTaxistaAdapter;
+import edelafa.transportec.Transportec.back.Pojos.TaxiDriver;
+import edelafa.transportec.Transportec.presenters.BasePresenter;
+import edelafa.transportec.Transportec.presenters.InfoTarifaPresenter;
 
-public class InfoTaxistaActivity extends Activity {
+public class InfoTaxistaActivity extends BaseActivity implements RefreshBaseRecyclerCallback, InfoTarifaPresenter.InfoTaxistasCallback{
 
-    private static final String TAG = "taxista";
 
-    @BindView(R.id.recyclerView)
-    ListView listViewTaxistas;
-    Retrofit retrofit;
+    @BindView(R.id.act_recicler_taxistas)
+    RecyclerView mRecyvlerTaxistas;
+
+    InfoTarifaPresenter mInfoTaxistaPresenter;
+    InfoTaxistaAdapter mInfoTaxistaAdapter;
+
+    private BaseSimpleRecyclerView mBaseSimpleRecyclerView;
+    public ArrayList<TaxiDriver> mTaxistas;
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
@@ -33,38 +38,36 @@ public class InfoTaxistaActivity extends Activity {
         setContentView(R.layout.activity_info_taxista);
         ButterKnife.bind(this);
 
-        retrofit = new Retrofit.Builder()
-                .baseUrl("https://transportec.000webhostapp.com/?dir=JSON/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        mBaseSimpleRecyclerView = new BaseSimpleRecyclerView(this, R.id.act_recicler_taxistas, R.id.act_refresh_taxistas)
+                .setRefreshBaseRecycler(this)
+                .setAdapter(mInfoTaxistaAdapter = new InfoTaxistaAdapter(this))
+                .setEmptyView(R.id.base_recicler_empy)
+                .addBottomOffsetDecoration(200);
+
+        mTaxistas = new ArrayList<TaxiDriver>(){{
+            add(new TaxiDriver("francisco","Lopez", "25", "calle 8 entre avenidas 1 y 2", "985784","2731203456","124"));
+
+        }};
+
+        mBaseSimpleRecyclerView.update(mTaxistas);
 
     }
 
-    private void obtenerDatos() {
+    @Override
+    protected BasePresenter getPresenter(){
+        return mInfoTaxistaPresenter = new InfoTarifaPresenter(this);
 
-        RetrofitService service = retrofit.create(RetrofitService.class);
-        Call<TaxistaRespuesta> taxistaRespuestaCall = service.obtenerListaTaxistas();
+    }
 
-        taxistaRespuestaCall.enqueue(new Callback<TaxistaRespuesta>() {
-            @Override
-            public void onResponse(Call<TaxistaRespuesta> call, Response<TaxistaRespuesta> response) {
 
-                if (response.isSuccessful()){
 
-                    TaxistaRespuesta taxistaRespuesta = response.body();
-                    ArrayList<Taxistas> listaTaxista = taxistaRespuesta.getResults();
-                }
-                else{
-                    Log.e(TAG, "onResponse: " + response.errorBody());
-                }
+    @Override
+    public void onRefreshItems() {
 
-            }
+    }
 
-            @Override
-            public void onFailure(Call<TaxistaRespuesta> call, Throwable t) {
-
-            }
-        });
-
+    @Override
+    public void onSuccessLoadTaxistas(ArrayList<TaxiDriver> mTaxista) {
+        mBaseSimpleRecyclerView.update(mTaxista);
     }
 }

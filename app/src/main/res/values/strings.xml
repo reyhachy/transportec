@@ -17,4 +17,5 @@
     <string name="hello_square">Hello Square World!</string>
 
     <string name="servicio_local">Servicio Local</string>
+    <string name="content_description">content_description</string>
 </resources>

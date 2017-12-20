@@ -1,23 +1,113 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">#212121</item>
-        <item name="colorPrimaryDark">#212121</item>
-        <item name="android:background">#0D47A1</item>
-        <item name="android:colorAccent">#FFFFFF</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@color/white</item>
+
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:listDivider">@color/transparent</item>
+
     </style>
 
-    <!-- Personalización de AlertDialog-->
-    <style name="AlertDialogCustom" parent="android:Theme.Material.Light.Dialog.Alert">
-        <item name="android:colorPrimary">#FFFFFF</item>
-        <item name="android:colorAccent">#000000</item>
-        <item name="android:background">#BBDEFE</item>
+    <style name="Platforms.Toolbar.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">#ffffff</item>
+    </style>
+
+    <style name="Platforms.Toolbar.Purple" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">#8023fe</item>
+    </style>
+
+
+
+    <style name="Base.AppTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="colorButtonNormal">@color/white</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <style name="myBackgroundStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:background">@color/white</item>
+    </style>
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemeSplitters" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorBlueLetter</item>
+        <item name="android:textColorPrimary">@color/Black</item>
+        <item name="android:textColorPrimaryInverse">@android:color/white</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+        <item name="android:textColorSecondaryInverse">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+
+    </style>
+
+    <style name="TextAppearance.TextInputLayout.Blue" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">@color/colorBlueLetter</item>
+        <item name="android:textSize">20sp</item>
+        <item name="colorControlNormal">@color/colorBlueLetter</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Hint" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorBlueLetter</item>
+        <item name="android:textColorHint">@color/colorPrimary</item>
+        <item name="android:listDivider">@color/red</item>
+    </style>
+
+
+
+    <style name="Header" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+
+    <style name="Tittle" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">#2e3947</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontPath">fonts/ProximaNova-Bold.ttf</item>
+    </style>
+
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/white</item> <!-- Whatever color you want-->
+    </style>
+
+    <style name="MyCustomPopuTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">#ffffff</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/golden</item>
+    </style>
 
 </resources>

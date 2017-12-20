@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1565C0"
     android:orientation="vertical">
 
     <LinearLayout
@@ -30,12 +32,29 @@
 
         </RelativeLayout>
 
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_login_content"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
 
@@ -43,7 +62,7 @@
                     android:id="@+id/usuario_text"
                     android:layout_width="250dp"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="50dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginRight="10dp"
                     android:layout_centerHorizontal="true"
                     android:hint="Usuario"
@@ -65,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
 
@@ -73,7 +92,7 @@
                 android:id="@+id/password_text"
                 android:layout_width="250dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_centerHorizontal="true"
                 android:hint="Contraseña"
@@ -95,7 +114,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:orientation="horizontal">
 
             <Button
@@ -118,6 +137,10 @@
 
 
         </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
 
     </LinearLayout>
 

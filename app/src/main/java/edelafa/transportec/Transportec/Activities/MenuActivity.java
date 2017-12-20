@@ -100,11 +100,11 @@ public class MenuActivity extends Activity {
             }
         });
 
-        bInfo.setOnClickListener(new View.OnClickListener() {
+        /*bInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                AlertDialog alert = new AlertDialog.Builder(MenuActivity.this, R.style.AlertDialogCustom).create();
+                AlertDialog alert = new AlertDialog.Builder(MenuActivity.this, R.style.Alert).create();
                 alert.setTitle("Estamos para brindarle el mejor servicio");
                 alert.setMessage("En el menu Solicitar, podra gestionar un servicio, ya sea dentro de la region de Huatusco" +
                         "o un servicio para salir de la ciudad, así como agendar un servicio en el lugar y hora que usted lo necesite.\n"+
@@ -117,7 +117,7 @@ public class MenuActivity extends Activity {
                 });
                 alert.show();
             }
-        });
+        });*/
 
     }
 
