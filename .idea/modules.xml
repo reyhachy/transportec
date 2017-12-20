@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Transportec.iml" filepath="$PROJECT_DIR$/Transportec.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/transportec.iml" filepath="$PROJECT_DIR$/transportec.iml" />
+      <module fileurl="file://C:\Users\deadp\Documents\Residencias\Transportec\app\app.iml" filepath="C:\Users\deadp\Documents\Residencias\Transportec\app\app.iml" />
+      <module fileurl="file://C:\Users\deadp\Documents\Residencias\Transportec\transportec.iml" filepath="C:\Users\deadp\Documents\Residencias\Transportec\transportec.iml" />
     </modules>
   </component>
 </project>
