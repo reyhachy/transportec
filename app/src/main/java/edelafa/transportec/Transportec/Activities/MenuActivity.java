@@ -1,8 +1,6 @@
 package edelafa.transportec.Transportec.Activities;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,8 +16,8 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import edelafa.transportec.Transportec.Adapters.ListAdapter;
 import edelafa.transportec.R;
+import edelafa.transportec.Transportec.Adapters.ListAdapter;
 
 public class MenuActivity extends Activity {
 
@@ -75,7 +73,7 @@ public class MenuActivity extends Activity {
                 Intent intent;
 
                 switch (selected){
-                    case "Solicitar Local": intent =
+                    case "Solicitar Taxi": intent =
                             new Intent(MenuActivity.this, ServiceActivity.class);
                         startActivity(intent);
                         break;

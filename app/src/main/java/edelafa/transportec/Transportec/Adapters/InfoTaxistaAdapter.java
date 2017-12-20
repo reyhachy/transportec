@@ -4,14 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.totalplay.utils.MessageUtils;
 import com.totalplay.view.BaseSimpleRecyclerView.BaseSimpleAdapter;
 import com.totalplay.view.BaseSimpleRecyclerView.BaseViewHolder;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import edelafa.transportec.R;
-import edelafa.transportec.Transportec.Activities.InfoTaxistaActivity;
 import edelafa.transportec.Transportec.back.Pojos.TaxiDriver;
 
 /**
@@ -44,6 +42,8 @@ public InfoTaxistaAdapter(AppCompatActivity appCompatActivity){
     public TextView nNumero;
     @BindView(R.id.ta_folio)
     public TextView nFolio;
+    @BindView(R.id.ta_lastN)
+    public TextView nlastN;
 
 
         public AdapterViewHolder(View itemView) {
@@ -54,6 +54,7 @@ public InfoTaxistaAdapter(AppCompatActivity appCompatActivity){
         @Override
         public void populate(BaseViewHolder holder, int position, TaxiDriver taxiDriver) {
             nName.setText(taxiDriver.name);
+            nlastN.setText(taxiDriver.lastName);
             nNumero.setText(taxiDriver.taxiNumber);
             nFolio.setText(taxiDriver.folioNumber);
 

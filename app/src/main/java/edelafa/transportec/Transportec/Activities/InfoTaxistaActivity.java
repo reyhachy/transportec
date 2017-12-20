@@ -1,10 +1,7 @@
 package edelafa.transportec.Transportec.Activities;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.ListView;
 
 import com.totalplay.view.BaseSimpleRecyclerView.BaseSimpleRecyclerView;
 import com.totalplay.view.BaseSimpleRecyclerView.RefreshBaseRecyclerCallback;
@@ -45,8 +42,8 @@ public class InfoTaxistaActivity extends BaseActivity implements RefreshBaseRecy
                 .addBottomOffsetDecoration(200);
 
         mTaxistas = new ArrayList<TaxiDriver>(){{
-            add(new TaxiDriver("francisco","Lopez", "25", "calle 8 entre avenidas 1 y 2", "985784","2731203456","124"));
-
+            add(new TaxiDriver("Francisco","Lopez", "25", "calle 8 entre avenidas 1 y 2", "985784","2731203456","124"));
+            add(new TaxiDriver("Juan","Rodriguez","31","avenida 4 entre calles 2 y 6", "163216","2731001821","010"));
         }};
 
         mBaseSimpleRecyclerView.update(mTaxistas);
