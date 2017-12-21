@@ -39,7 +39,7 @@ public InfoTaxistaAdapter(AppCompatActivity appCompatActivity){
     @BindView(R.id.ta_name)
     public TextView nName;
     @BindView(R.id.ta_no)
-    public TextView nNumero;
+    public TextView nNumber;
     @BindView(R.id.ta_folio)
     public TextView nFolio;
     @BindView(R.id.ta_lastN)
@@ -55,7 +55,7 @@ public InfoTaxistaAdapter(AppCompatActivity appCompatActivity){
         public void populate(BaseViewHolder holder, int position, TaxiDriver taxiDriver) {
             nName.setText(taxiDriver.name);
             nlastN.setText(taxiDriver.lastName);
-            nNumero.setText(taxiDriver.taxiNumber);
+            nNumber.setText(taxiDriver.taxiNumber);
             nFolio.setText(taxiDriver.folioNumber);
 
         }

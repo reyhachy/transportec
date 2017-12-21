@@ -1,6 +1,8 @@
 package edelafa.transportec.Transportec.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 
 import com.totalplay.view.BaseSimpleRecyclerView.BaseSimpleRecyclerView;
@@ -28,6 +30,11 @@ public class InfoTaxistaActivity extends BaseActivity implements RefreshBaseRecy
 
     private BaseSimpleRecyclerView mBaseSimpleRecyclerView;
     public ArrayList<TaxiDriver> mTaxistas;
+
+    public static void launch(AppCompatActivity appCompatActivity) {
+        Intent intent = new Intent(appCompatActivity, InfoTaxistaActivity.class);
+        appCompatActivity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate (Bundle savedInstanceState){
