@@ -24,34 +24,59 @@ import edelafa.transportec.R;
 import edelafa.transportec.Transportec.Adapters.ListAdapter;
 
 public class MenuActivity extends BaseActivity {
-
-    public static void launch(AppCompatActivity appCompatActivity) {
-        Intent intent = new Intent(appCompatActivity, MenuActivity.class);
-        appCompatActivity.startActivity(intent);
-    }
+    @BindView(R.id.b_info)
+    Button bInfo;
 
     List<String> ChildList;
     Map<String, List<String>> ParentListItems;
     ExpandableListView expandableListView;
 
-    @BindView(R.id.b_info)
-    Button bInfo;
-
-    List<String> ParentList = new ArrayList<String>();
-    {
+    List<String> ParentList = new ArrayList<String>();{
         ParentList.add("Servicio");
-        ParentList.add("Consultar");
-    }
+        ParentList.add("Consultar");}
 
     String[] SolicitudName = {"Solicitar Taxi"};
     String[] InformaciónName = {"Tarifas", "Taxistas"};
     String[] ByDefaultMessage = {"Cargando"};
 
+
+    public static void launch(AppCompatActivity appCompatActivity) {
+        Intent intent = new Intent(appCompatActivity, MenuActivity.class);
+        appCompatActivity.startActivity(intent);
+    }
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setToolbarEnabled(false);
         setContentView(R.layout.activity_menu);
         ButterKnife.bind(this);
+        chargeList();
+        chargeDialog();
+    }
+
+    private void chargeDialog() {
+        bInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                AlertDialog alert = new AlertDialog.Builder(MenuActivity.this).create();
+                alert.setTitle("Estamos para brindarle el mejor servicio");
+                alert.setMessage("En el menu Solicitar, podra gestionar un servicio, ya sea dentro de la region de Huatusco" +
+                        "o un servicio para salir de la ciudad, así como agendar un servicio en el lugar y hora que usted lo necesite.\n"+
+                        "\nEn el menu Consultar, usted podrá informarse acerca de nuestras Tarifas y comprobar los taxistas que " +
+                        "estan registrados en nuestra empresa");
+                alert.setButton("Ok", new DialogInterface.OnClickListener(){
+
+                    public void onClick (DialogInterface dialog, int which){
+                    }
+                });
+                alert.show();
+            }
+        });
+    }
+
+    public void chargeList(){
         ParentListItems = new LinkedHashMap<String, List<String>>();
 
         for (String HoldItem : ParentList){
@@ -95,32 +120,12 @@ public class MenuActivity extends BaseActivity {
                 return true;
             }
         });
-
-        bInfo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                AlertDialog alert = new AlertDialog.Builder(MenuActivity.this).create();
-                alert.setTitle("Estamos para brindarle el mejor servicio");
-                alert.setMessage("En el menu Solicitar, podra gestionar un servicio, ya sea dentro de la region de Huatusco" +
-                        "o un servicio para salir de la ciudad, así como agendar un servicio en el lugar y hora que usted lo necesite.\n"+
-                        "\nEn el menu Consultar, usted podrá informarse acerca de nuestras Tarifas y comprobar los taxistas que " +
-                        "estan registrados en nuestra empresa");
-                alert.setButton("Ok", new DialogInterface.OnClickListener(){
-
-                    public void onClick (DialogInterface dialog, int which){
-                    }
-                });
-                alert.show();
-            }
-        });
-
     }
 
     private void loadChild(String[] ParentElementsName) {
         ChildList = new ArrayList<String>();
         for (String model: ParentElementsName)
             ChildList.add(model);
-        }
+    }
 
 }
