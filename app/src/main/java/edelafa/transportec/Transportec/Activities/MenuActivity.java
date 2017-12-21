@@ -1,6 +1,8 @@
 package edelafa.transportec.Transportec.Activities;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+
+import com.totalplay.mvp.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -19,7 +23,7 @@ import butterknife.ButterKnife;
 import edelafa.transportec.R;
 import edelafa.transportec.Transportec.Adapters.ListAdapter;
 
-public class MenuActivity extends Activity {
+public class MenuActivity extends BaseActivity {
 
     public static void launch(AppCompatActivity appCompatActivity) {
         Intent intent = new Intent(appCompatActivity, MenuActivity.class);
@@ -33,14 +37,12 @@ public class MenuActivity extends Activity {
     @BindView(R.id.b_info)
     Button bInfo;
 
-    //Se asignan los Padres de la ExpandableListView
     List<String> ParentList = new ArrayList<String>();
     {
         ParentList.add("Servicio");
         ParentList.add("Consultar");
     }
 
-    //Se asignan los Hijos de la ExpandableListView
     String[] SolicitudName = {"Solicitar Taxi"};
     String[] InformaciónName = {"Tarifas", "Taxistas"};
     String[] ByDefaultMessage = {"Cargando"};
@@ -73,24 +75,20 @@ public class MenuActivity extends Activity {
                 Intent intent;
 
                 switch (selected){
-                    case "Solicitar Taxi": intent =
-                            new Intent(MenuActivity.this, ServiceActivity.class);
-                        startActivity(intent);
+                    case "Solicitar Taxi":
+                        ServiceActivity.launch(MenuActivity.this);
                         break;
                 }
 
                 switch (selected){
-                    case "Tarifas": intent =
-                            new Intent(MenuActivity.this, InfoTarifaActivity.class);
-                        startActivity(intent);
+                    case "Tarifas":
+                        InfoTarifaActivity.launch(MenuActivity.this);
                         break;
                 }
 
                 switch (selected){
-                    case "Taxistas": intent =
-
-                            new Intent(MenuActivity.this, InfoTaxistaActivity.class);
-                        startActivity(intent);
+                    case "Taxistas":
+                        InfoTaxistaActivity.launch(MenuActivity.this);
                         break;
                 }
 
@@ -98,11 +96,11 @@ public class MenuActivity extends Activity {
             }
         });
 
-        /*bInfo.setOnClickListener(new View.OnClickListener() {
+        bInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                AlertDialog alert = new AlertDialog.Builder(MenuActivity.this, R.style.Alert).create();
+                AlertDialog alert = new AlertDialog.Builder(MenuActivity.this).create();
                 alert.setTitle("Estamos para brindarle el mejor servicio");
                 alert.setMessage("En el menu Solicitar, podra gestionar un servicio, ya sea dentro de la region de Huatusco" +
                         "o un servicio para salir de la ciudad, así como agendar un servicio en el lugar y hora que usted lo necesite.\n"+
@@ -115,7 +113,7 @@ public class MenuActivity extends Activity {
                 });
                 alert.show();
             }
-        });*/
+        });
 
     }
 
